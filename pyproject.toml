@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flowphantom"
+version = "0.1.0"
+description = "Generate multi-coil 4D Flow MRI digital phantoms from SimVascular / Vascular Model Repository CFD models"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26,<3", "scipy>=1.12,<2", "vtk>=9.3,<10", "h5py>=3.10,<4",
+    "notebook>=7,<8", "ipykernel>=6,<8", "matplotlib>=3.8,<4",
+]
+
+[project.optional-dependencies]
+cuda = ["cupy-cuda13x[ctk]>=14,<15", "warp-lang>=1.17,<2"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
