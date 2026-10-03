@@ -58,10 +58,6 @@ An explicit `frames` count selects native frames directly when the requested tim
 
 Set `output="outputs/phantom.h5"` to stream results to HDF5; use `with simulate(...) as result:` to close the file after use. HDF5 contains k-space, coil maps, B0, timestamps, encoding matrix, tissue fractions, CFD velocity truth, and metadata.
 
-The notebook shows FSI streamlines, the synthetic B0 field, orthogonal k-space/magnitude/phase views, and phase-derived velocity. Tissue and coil models are illustrative steady-state approximations.
-
-`B0Field(smooth_std_hz=40, correlation_length_mm=(15,20,25), seed=0)` adds a smooth spatially correlated residual to the polynomial field. This synthetic shim model retains common B0 phase in the reference encoding; it is not an anatomical susceptibility simulation.
-
 ## License
 
 Code: [MIT](LICENSE). VMR data: [terms](https://www.vascularmodel.com/FAQs.html) and [attribution notice](THIRD_PARTY_NOTICES.md); preserve `README-COPYRIGHT` when redistributing data.
